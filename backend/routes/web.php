@@ -13,7 +13,7 @@
 |
 */
 
-$router->get('/', function () use ($router) {
+$router->get('/home', function () use ($router) {
     return $router->app->version();
 });
 
