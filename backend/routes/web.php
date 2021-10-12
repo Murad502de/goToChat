@@ -19,6 +19,6 @@ $router->get('/home/{p1}/{p2}', function ( $p1, $p2 ) {
     return "Hallo Welt! " . $p1 . " " . $p2;
 });
 
-$router->get('/api/redirect', [ 'uses' => 'amoCRMredirectController@redirect' ] );
+$router->get('/api/redirect', "amoCRMredirectController@redirect" );
 
 $router->get('/api/redirect/clean/{subdomain}', [ 'uses' => 'amoCRMredirectController@deleteData' ] );
