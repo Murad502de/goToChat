@@ -13,8 +13,8 @@
 |
 */
 
-$app->get('/home', function () use ($router) {
-    return $router->app->version();
+$router->get('/home', function () {
+    return "Hallo Welt!";
 });
 
 $router->get('/api/redirect', [ 'uses' => 'amoCRMredirectController@redirect' ] );
