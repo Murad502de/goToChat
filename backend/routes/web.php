@@ -13,6 +13,8 @@
 |
 */
 
+use App\Http\Controllers\amoCRMredirectController;
+
 $router->get('/home/{p1}/{p2}', function ( $p1, $p2 ) {
     return "Hallo Welt! " . $p1 . " " . $p2;
 });
