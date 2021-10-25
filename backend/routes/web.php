@@ -13,12 +13,6 @@
 |
 */
 
-use App\Http\Controllers\amoCRMredirectController;
-
-$router->get('/home/{p1}/{p2}', function ( $p1, $p2 ) {
-    return "Hallo Welt! " . $p1 . " " . $p2;
+$router->get('/', function () use ($router) {
+    return $router->app->version();
 });
-
-$router->get('/api/redirect', "amoCRMredirectController@redirect" );
-
-$router->get('/api/redirect/clean/{subdomain}', [ 'uses' => 'amoCRMredirectController@deleteData' ] );

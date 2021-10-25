@@ -285,15 +285,15 @@ define(
         bind_actions           : function () {
           self.helpers.debug( self.config.name + " << bind_actions" );
 
-          if ( !document.widgetName_bindAction )
+          if ( !document[ self.config.name ] )
           {
-            self.helpers.debug( 'widgetName_bindAction does not exist' );
+            self.helpers.debug( `${self.config.name} does not exist` );
 
-            document.widgetName_bindAction = true;
+            document[ self.config.name ] = true;
           }
           else
           {
-            self.helpers.debug( 'widgetName_bindAction exists' );
+            self.helpers.debug( `${self.config.name} exists` );
           }
 
           return true;
